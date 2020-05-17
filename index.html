@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить новый фильм</title>
+</head>
+<body>
+    <form action="https://fom.in.ua/echo">
+        <label for="film">
+            Заголовок фильма
+        </label>
+        <br>
+        <input type="text" id="film" name="title" required>
+        <br>
+        <br>
+        <label for="img">
+            Прикрепить обложку фильма
+        </label>
+        <input type="file" id="img" name="poster">
+        <br>
+        <br>
+        <label for="duration">
+            Продолжительность фильма
+        </label>    
+        <input type="time" name="duration" id="duration">
+        <br>
+        <br>
+        <fieldset>
+            <legend>
+                Жанр(ы) фильма
+            </legend>
+            <label for="comedy">
+                Комедия
+            </label>
+            <input type="checkbox" id="comedy" name="genre" value="cm">
+            <label for="thriller">
+                Триллер
+            </label>
+            <input type="checkbox" id="thriller" name="genre" value="tr">
+            <label for="drama">
+                Драма
+            </label>
+            <input type="checkbox" id="drama" name="genre" value="dr">
+            <label for="fighter">
+                Боевик
+            </label>
+            <input type="checkbox" id="fighter" name="genre" value="bv">
+            <label for="fantasy">
+                Фантастика
+            </label>
+            <input type="checkbox" id="fantasy" name="genre" value="fan">  
+        </fieldset>    
+        <br>
+        <fieldset>
+            <legend>
+                Возрастное ограничение
+            </legend>
+            <label for="age_limit_yes">
+                до 18
+            </label>
+            <input type="radio" id="age_limit_yes" name="age_limit" value="un_18">
+            <label for="age_limit_no">
+                нет
+            </label>
+            <input type="radio" id="age_limit_no" name="age_limit" value="no">
+        </fieldset>
+        <br>
+        <label for="inf_url">
+            Добавить ссылку на иформацию о фильме
+        </label>
+        <input type="url" id="inf_url" name="url">
+        <br>
+        <br>        
+        <label for="startdate">
+            Дата выхода в прокат
+        </label> 
+        <input type="date" id="startdate" name="sdate">
+        <br>
+        <br>
+        <label for="rating">
+            Рейтинг фильма
+        </label>
+        <br>
+        <input type="range" id="rating" name="rating" min="1" max="10">
+        <br>
+        <label for="oskar">
+            Количество оскаров
+        </label>
+        <input type="number" id="oskar" name="oskars" min="1" max="30" step="1">
+        <br>
+        <br>   
+        <label for="preview">
+            Написать превью к фильму
+        </label>
+        <br>
+        <textarea name="preview" id="preview" cols="65" rows="10" placeholder="Описание фильма" required></textarea>
+        <br>       
+        <br>
+        <label for="language">
+            Язык фильма
+        </label>
+        <select name="lang" id="language">
+            <option value="ua">Украинский</option>
+            <option value="ru">Русский</option>
+            <option value="en">Английский</option>
+        </select>
+        <input type="hidden" value="2020-05-07" name="today">
+        <br>
+        <br>
+        <input type="reset" id="clean" value="Очистить форму">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
